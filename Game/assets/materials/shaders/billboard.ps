@@ -1,0 +1,15 @@
+uniform sampler2D color_texture;
+
+varying vec3 v_position;
+varying vec3 v_world_position;
+varying vec2 v_uv;
+varying vec4 v_color;
+varying vec3 v_normal;
+
+void main()
+{
+	//store the final color in the FragColor
+	vec4 v_color = texture2D(color_texture, v_uv).xyzw;
+	gl_FragColor = v_color;
+}
+

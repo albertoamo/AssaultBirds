@@ -1,0 +1,20 @@
+//this var comes from the vertex shader
+varying vec3 v_position;
+varying vec3 v_world_position;
+varying vec2 v_uv;
+varying vec4 v_color;
+varying vec3 v_normal;
+
+//Texturas
+uniform sampler2D color_texture;
+uniform vec3 text_color;
+uniform float alpha;
+
+void main()
+{
+
+	float alphad = texture2D(color_texture, v_uv).w;
+
+	//store the final color in the FragColor
+	gl_FragColor = vec4(0.0,0.0,0.0,1.0);
+}

@@ -1,0 +1,44 @@
+//this var comes from the vertex shader
+varying vec3 v_position;
+varying vec3 v_world_position;
+varying vec2 v_uv;
+varying vec4 v_color;
+varying vec3 v_normal;
+
+//Atributos Camara y luz
+uniform vec3 eye_pos;
+
+uniform vec3 light_color;
+uniform vec3 light_pos;
+uniform float id;
+uniform float is;
+uniform float ref_height;
+
+//Texturas
+uniform sampler2D color_texture;
+uniform sampler2D color_textureN;
+
+const float LOG2 = 1.442695;
+
+vec3 makeFog(vec3 org_color)
+{
+	float zet = length(eye_pos - v_world_position);
+	float fogFactor = exp2( -0.0001 * 0.0001 * zet * zet * LOG2 );
+	fogFactor = clamp(fogFactor, 0.0, 1.0);
+	return mix(vec3(0.5,0.5,0.5), org_color, fogFactor);
+}
+
+void main()
+{
+
+	v_color = v_color * texture2D(color_texture, v_uv).xyzw;
+
+	#ifdef FOG
+		v_color.xyz = makeFog(v_color);
+	#endif
+
+	if(v_world_position.y < ref_height)
+		discard;
+	//store the final color in the FragColor
+	gl_FragColor = v_color;
+}

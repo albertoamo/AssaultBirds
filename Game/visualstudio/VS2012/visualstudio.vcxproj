@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Billboard.cpp" />
+    <ClCompile Include="..\..\src\BombardierController.cpp" />
+    <ClCompile Include="..\..\src\camera.cpp" />
+    <ClCompile Include="..\..\src\ControllerManager.cpp" />
+    <ClCompile Include="..\..\src\Frame.cpp" />
+    <ClCompile Include="..\..\src\FrameState.cpp" />
+    <ClCompile Include="..\..\src\GroundObjective.cpp" />
+    <ClCompile Include="..\..\src\Hud.cpp" />
+    <ClCompile Include="..\..\src\IAController.cpp" />
+    <ClCompile Include="..\..\src\JetController.cpp" />
+    <ClCompile Include="..\..\src\Label.cpp" />
+    <ClCompile Include="..\..\src\Observer.cpp" />
+    <ClCompile Include="..\..\src\PlayerController.cpp" />
+    <ClCompile Include="..\..\src\ShipController.cpp" />
+    <ClCompile Include="..\..\src\Technique.cpp" />
+    <ClCompile Include="..\..\src\TurretController.cpp" />
+    <ClCompile Include="..\..\src\Weapon.cpp" />
+    <ClCompile Include="..\..\src\clipper.cpp" />
+    <ClCompile Include="..\..\src\coldet\box.cpp" />
+    <ClCompile Include="..\..\src\coldet\box_bld.cpp" />
+    <ClCompile Include="..\..\src\coldet\coldet.cpp" />
+    <ClCompile Include="..\..\src\coldet\coldet_bld.cpp" />
+    <ClCompile Include="..\..\src\coldet\math3d.cpp" />
+    <ClCompile Include="..\..\src\coldet\mytritri.cpp" />
+    <ClCompile Include="..\..\src\coldet\sysdep.cpp" />
+    <ClCompile Include="..\..\src\coldet\tritri.c" />
+    <ClCompile Include="..\..\src\EntityLight.cpp" />
+    <ClCompile Include="..\..\src\EntityMesh.cpp" />
+    <ClCompile Include="..\..\src\Vehicle.cpp" />
+    <ClCompile Include="..\..\src\extra\textparser.cpp" />
+    <ClCompile Include="..\..\src\framework.cpp" />
+    <ClCompile Include="..\..\src\game.cpp" />
+    <ClCompile Include="..\..\src\init\loader.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\material.cpp" />
+    <ClCompile Include="..\..\src\mesh.cpp" />
+    <ClCompile Include="..\..\src\Renderer.cpp" />
+    <ClCompile Include="..\..\src\rendertotexture.cpp" />
+    <ClCompile Include="..\..\src\shader.cpp" />
+    <ClCompile Include="..\..\src\Entity.cpp" />
+    <ClCompile Include="..\..\src\BulletManager.cpp" />
+    <ClCompile Include="..\..\src\texture.cpp" />
+    <ClCompile Include="..\..\src\utils.cpp" />
+    <ClCompile Include="..\..\src\world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\AirplaneFactory.h" />
+    <ClInclude Include="..\..\src\Billboard.h" />
+    <ClInclude Include="..\..\src\BombardierController.h" />
+    <ClInclude Include="..\..\src\BulletManager.h" />
+    <ClInclude Include="..\..\src\camera.h" />
+    <ClInclude Include="..\..\src\ControllerManager.h" />
+    <ClInclude Include="..\..\src\Frame.h" />
+    <ClInclude Include="..\..\src\FrameState.h" />
+    <ClInclude Include="..\..\src\GroundObjective.h" />
+    <ClInclude Include="..\..\src\Hud.h" />
+    <ClInclude Include="..\..\src\IAController.h" />
+    <ClInclude Include="..\..\src\JetController.h" />
+    <ClInclude Include="..\..\src\Label.h" />
+    <ClInclude Include="..\..\src\MenuFactory.h" />
+    <ClInclude Include="..\..\src\Node.h" />
+    <ClInclude Include="..\..\src\NodeFactory.h" />
+    <ClInclude Include="..\..\src\Observer.h" />
+    <ClInclude Include="..\..\src\PlayerController.h" />
+    <ClInclude Include="..\..\src\ShipController.h" />
+    <ClInclude Include="..\..\src\ShipFactory.h" />
+    <ClInclude Include="..\..\src\SoundManager.h" />
+    <ClInclude Include="..\..\src\Technique.h" />
+    <ClInclude Include="..\..\src\TurretController.h" />
+    <ClInclude Include="..\..\src\TurretFactory.h" />
+    <ClInclude Include="..\..\src\Weapon.h" />
+    <ClInclude Include="..\..\src\clipper.h" />
+    <ClInclude Include="..\..\src\coldet\box.h" />
+    <ClInclude Include="..\..\src\coldet\coldet.h" />
+    <ClInclude Include="..\..\src\coldet\coldetimpl.h" />
+    <ClInclude Include="..\..\src\coldet\math3d.h" />
+    <ClInclude Include="..\..\src\coldet\mytritri.h" />
+    <ClInclude Include="..\..\src\coldet\sysdep.h" />
+    <ClInclude Include="..\..\src\Controller.h" />
+    <ClInclude Include="..\..\src\Entity.h" />
+    <ClInclude Include="..\..\src\EntityLight.h" />
+    <ClInclude Include="..\..\src\EntityMesh.h" />
+    <ClInclude Include="..\..\src\Vehicle.h" />
+    <ClInclude Include="..\..\src\extra\textparser.h" />
+    <ClInclude Include="..\..\src\framework.h" />
+    <ClInclude Include="..\..\src\game.h" />
+    <ClInclude Include="..\..\src\includes.h" />
+    <ClInclude Include="..\..\src\init\loader.h" />
+    <ClInclude Include="..\..\src\material.h" />
+    <ClInclude Include="..\..\src\mesh.h" />
+    <ClInclude Include="..\..\src\Renderer.h" />
+    <ClInclude Include="..\..\src\rendertotexture.h" />
+    <ClInclude Include="..\..\src\shader.h" />
+    <ClInclude Include="..\..\src\texture.h" />
+    <ClInclude Include="..\..\src\utils.h" />
+    <ClInclude Include="..\..\src\world.h" />
+    <ClInclude Include="..\..\src\WorldFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\coldet\coldet.dsp" />
+    <None Include="..\..\src\coldet\makefile.g++" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D25DFFC1-8AEE-45BD-9345-D74387579CA7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>visualstudio</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>..\libs\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>..\libs\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../libs/include;../libs/include/Freetype</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;opengl32.lib;glu32.lib;glew32.lib;freetype255.lib;bass.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../libs/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;opengl32.lib;glu32.lib;glew32.lib;bass.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

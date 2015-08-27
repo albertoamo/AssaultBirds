@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Coldet">
+      <UniqueIdentifier>{efe2d197-aedb-4c7c-8a82-bafc786f5643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extra">
+      <UniqueIdentifier>{adfd9151-cee3-46d3-97be-e66e8dc06763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Init">
+      <UniqueIdentifier>{0fdfdedb-d224-4009-a945-0a77a1ab0750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{2cba3aae-5dcd-432d-ac25-6edfc094e0b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{e543047e-95b2-4401-b768-4f4ba4a95d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factories">
+      <UniqueIdentifier>{01a22a9b-d4be-42e1-ad52-4a33162f9952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controllers">
+      <UniqueIdentifier>{d9c83173-498b-4cc2-93a6-fd62a8846db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{bbbd6005-e978-45d8-9940-aa76cb963214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Listeners">
+      <UniqueIdentifier>{8ef9ea5d-62e9-4c79-a21e-4af07cc1947f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\coldet\box.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\box_bld.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\coldet.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\coldet_bld.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\math3d.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\mytritri.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\sysdep.cpp">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coldet\tritri.c">
+      <Filter>Coldet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\extra\textparser.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\init\loader.cpp">
+      <Filter>Init</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\EntityLight.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\EntityMesh.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\camera.cpp" />
+    <ClCompile Include="..\..\src\clipper.cpp" />
+    <ClCompile Include="..\..\src\framework.cpp" />
+    <ClCompile Include="..\..\src\game.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\material.cpp" />
+    <ClCompile Include="..\..\src\mesh.cpp" />
+    <ClCompile Include="..\..\src\rendertotexture.cpp" />
+    <ClCompile Include="..\..\src\shader.cpp" />
+    <ClCompile Include="..\..\src\texture.cpp" />
+    <ClCompile Include="..\..\src\utils.cpp" />
+    <ClCompile Include="..\..\src\world.cpp" />
+    <ClCompile Include="..\..\src\Entity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Billboard.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BulletManager.cpp" />
+    <ClCompile Include="..\..\src\Weapon.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vehicle.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Technique.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\IAController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PlayerController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ControllerManager.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Observer.cpp">
+      <Filter>Listeners</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Hud.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Label.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\JetController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TurretController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ShipController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BombardierController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Frame.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FrameState.cpp">
+      <Filter>Listeners</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GroundObjective.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\coldet\box.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coldet\coldet.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coldet\coldetimpl.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coldet\math3d.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coldet\mytritri.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coldet\sysdep.h">
+      <Filter>Coldet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\extra\textparser.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\init\loader.h">
+      <Filter>Init</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Entity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\EntityLight.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\EntityMesh.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\camera.h" />
+    <ClInclude Include="..\..\src\clipper.h" />
+    <ClInclude Include="..\..\src\framework.h" />
+    <ClInclude Include="..\..\src\game.h" />
+    <ClInclude Include="..\..\src\includes.h" />
+    <ClInclude Include="..\..\src\material.h" />
+    <ClInclude Include="..\..\src\mesh.h" />
+    <ClInclude Include="..\..\src\rendertotexture.h" />
+    <ClInclude Include="..\..\src\shader.h" />
+    <ClInclude Include="..\..\src\texture.h" />
+    <ClInclude Include="..\..\src\utils.h" />
+    <ClInclude Include="..\..\src\world.h" />
+    <ClInclude Include="..\..\src\BulletManager.h" />
+    <ClInclude Include="..\..\src\Billboard.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\AirplaneFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Weapon.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Vehicle.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Technique.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ControllerManager.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\IAController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PlayerController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Observer.h">
+      <Filter>Listeners</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Hud.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Label.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NodeFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Node.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\JetController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SoundManager.h" />
+    <ClInclude Include="..\..\src\TurretController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TurretFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ShipController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ShipFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\BombardierController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Frame.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MenuFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FrameState.h">
+      <Filter>Listeners</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\WorldFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\GroundObjective.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\coldet\coldet.dsp">
+      <Filter>Coldet</Filter>
+    </None>
+    <None Include="..\..\src\coldet\makefile.g++">
+      <Filter>Coldet</Filter>
+    </None>
+  </ItemGroup>
+</Project>

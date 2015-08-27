@@ -1,0 +1,65 @@
+﻿Build started 26/06/2015 9:28:35.
+     1>Project "E:\Alberto\Desktop\FINALIZADO\SonidosChachis\visualstudio\VS2012\visualstudio.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../libs/include /I../libs/include/Freetype /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\EntityMesh.cpp
+         EntityMesh.cpp
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\init\loader.h(27): warning C4091: 'typedef ' : ignored on left of 'auxModel' when no variable is declared
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\renderer.h(22): warning C4099: 'RenderStack' : type name first seen using 'class' now seen using 'struct'
+                 e:\alberto\desktop\finalizado\sonidoschachis\src\entitymesh.h(19) : see declaration of 'RenderStack'
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\entitymesh.cpp(282): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\entitymesh.cpp(283): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\entitymesh.cpp(284): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>e:\alberto\desktop\finalizado\sonidoschachis\src\entitymesh.cpp(291): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\visualstudio_debug.exe" /INCREMENTAL:NO /NOLOGO SDL2.lib SDL2main.lib opengl32.lib glu32.lib glew32.lib freetype255.lib bass.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\visualstudio_debug.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\visualstudio_debug.lib" /MACHINE:X86 Debug\Billboard.obj
+         Debug\BombardierController.obj
+         Debug\camera.obj
+         Debug\ControllerManager.obj
+         Debug\Frame.obj
+         Debug\FrameState.obj
+         Debug\GroundObjective.obj
+         Debug\Hud.obj
+         Debug\IAController.obj
+         Debug\JetController.obj
+         Debug\Label.obj
+         Debug\Observer.obj
+         Debug\PlayerController.obj
+         Debug\ShipController.obj
+         Debug\Technique.obj
+         Debug\TurretController.obj
+         Debug\Weapon.obj
+         Debug\clipper.obj
+         Debug\box.obj
+         Debug\box_bld.obj
+         Debug\coldet.obj
+         Debug\coldet_bld.obj
+         Debug\math3d.obj
+         Debug\mytritri.obj
+         Debug\sysdep.obj
+         Debug\tritri.obj
+         Debug\EntityLight.obj
+         Debug\EntityMesh.obj
+         Debug\Vehicle.obj
+         Debug\textparser.obj
+         Debug\framework.obj
+         Debug\game.obj
+         Debug\loader.obj
+         Debug\main.obj
+         Debug\material.obj
+         Debug\mesh.obj
+         Debug\Renderer.obj
+         Debug\rendertotexture.obj
+         Debug\shader.obj
+         Debug\Entity.obj
+         Debug\BulletManager.obj
+         Debug\texture.obj
+         Debug\utils.obj
+         Debug\world.obj
+     1>Billboard.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         visualstudio.vcxproj -> E:\Alberto\Desktop\FINALIZADO\SonidosChachis\visualstudio\VS2012\..\..\visualstudio_debug.exe
+     1>Done Building Project "E:\Alberto\Desktop\FINALIZADO\SonidosChachis\visualstudio\VS2012\visualstudio.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.74

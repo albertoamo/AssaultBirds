@@ -1,0 +1,166 @@
+//this var comes from the vertex shader
+varying vec3 v_position;
+varying vec3 v_world_position;
+varying vec2 v_uv;
+varying vec4 v_color;
+varying vec3 v_normal;
+varying vec4 projCoords;
+
+//Atributos Camara y luz
+uniform vec3 eye_pos;
+
+uniform vec3 light_color;
+uniform vec3 light_pos;
+uniform float id;
+uniform float is;
+
+//Texturas
+uniform sampler2D color_texture;
+uniform sampler2D ref_texture;
+uniform sampler2D color_textureN;
+uniform sampler2D cubeMap;
+uniform float time;
+vec3 ambColor = vec3(0.9,0.9,0.9);
+float ambK = 0.4;
+float gamma = 1.8;
+
+const float LOG2 = 1.442695;
+
+float diffuse_reflection(vec3 L, vec3 N)
+{
+	float LdotN = max(0,dot(L, N));
+	return id*LdotN*0.6;
+}
+
+float specular_blinn(vec3 L, vec3 V, vec3 N)
+{
+	vec3 halfwayDir = normalize(L + V);  
+    float spec = pow(max(dot(N, halfwayDir), 0.0), 32.0);
+	return texture2D( color_texture, v_uv ).w * spec * is;
+}
+
+//Tangent space operations, not coded by us.
+///////////////////////////////////////////////
+mat3 cotangent_frame(vec3 N, vec3 p, vec2 uv)
+{
+    // get edge vectors of the pixel triangle
+    vec3 dp1 = dFdx( p );
+    vec3 dp2 = dFdy( p );
+    vec2 duv1 = dFdx( uv );
+    vec2 duv2 = dFdy( uv );
+ 
+    // solve the linear system
+    vec3 dp2perp = cross( dp2, N );
+    vec3 dp1perp = cross( N, dp1 );
+    vec3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    vec3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = inversesqrt( max( dot(T,T), dot(B,B) ) );
+    return mat3( T * invmax, B * invmax, N );
+}
+
+vec3 perturb_normal( vec3 N, vec3 V, vec2 texcoord )
+{
+    // assume N, the interpolated vertex normal and 
+    // V, the view vector (vertex to eye)
+	vec3 map = texture(color_textureN, texcoord ).xyz;
+	map = map * 255./127. - 128./127.;
+    mat3 TBN = cotangent_frame(N, -V, texcoord);
+    return normalize(TBN * map);
+}
+///////////////////////////////////////////
+
+
+float light_constant()
+{
+	vec3 normal = normalize(v_normal);
+
+	vec3 light = normalize(light_pos - vec3(0,0,0));//normalize(light_pos - v_world_position); LUZ DIRECCIONAL
+	vec3 vista = normalize(eye_pos - v_world_position);
+
+	vec3 N = normal;
+
+	vec3 reflection = normalize( reflect(-light, N) );
+
+	float dif = diffuse_reflection(light, N);
+	float spec = specular_blinn(light, vista, N);
+
+	#ifdef SPECULAR
+		return dif + spec;
+	#else
+		return dif;
+	#endif
+
+}
+
+
+vec3 phong_ecuation()
+{
+
+	//Mixing the intensity colors together with it's constants
+	vec3 v_color = (ambK + light_constant()) * (light_color * ambColor );
+
+	//Adding the ambient component to the equation
+
+	/*
+	vec2 resolution = vec2(2,2);
+	vec2 cPos = -1.0 + 2.0 * v_uv.xy / resolution.xy;
+	float cLength = length(cPos);
+
+	time = time/100000;
+	vec2 uv = v_uv.xy/resolution.xy+(cPos/cLength)*cos(cLength*12.0-time*4.0)*0.03;
+	v_color = texture2D(color_texture,uv).xyz * v_color;*/
+	
+	//v_color = texture2D(color_texture, vec2(v_uv.x + time/1000000, v_uv.y)).xyz * v_color;
+	
+	vec3 noiseVec;
+	vec2 displacement;
+
+	displacement = v_uv.xy;
+	float scaledTimer = time/100000 * 0.3;
+
+	displacement.x += scaledTimer;
+	displacement.y -= scaledTimer;
+
+	noiseVec = normalize(texture2D(color_textureN, displacement.xy).xyz);
+	noiseVec = (noiseVec * 2.0 - 1.0) * 0.035;
+
+	v_color = texture2D(color_texture, v_uv + noiseVec.xy).xyz * v_color;
+	return v_color;
+	
+}
+
+vec3 makeFog(vec3 org_color)
+{
+	float zet = length(eye_pos - v_world_position);
+	float fogFactor = exp2( -0.0001 * 0.0001 * zet * zet );
+	fogFactor = clamp(fogFactor, 0.0, 1.0);
+	return mix(vec3(0.18,0.24,0.31), org_color, fogFactor);
+}
+
+vec4 makeReflection(vec4 v_color){
+	
+	vec3 finalCoords = projCoords.xyz / projCoords.w;
+	finalCoords = finalCoords * 0.5 + 0.5;
+	vec4 ProjMapColor = texture(ref_texture, finalCoords);
+
+	return ProjMapColor*v_color;
+
+}
+
+void main()
+{
+
+	v_color.xyz = v_color.xyz * phong_ecuation();
+
+	
+	#ifdef FOG
+		v_color.xyz = makeFog(v_color.xyz);
+	#endif
+
+	v_color = makeReflection(v_color);	
+
+    v_color.xyz = pow( v_color.xyz, vec3(1.0/gamma));
+	gl_FragColor = vec4(v_color.xyz, 0.5);
+}
